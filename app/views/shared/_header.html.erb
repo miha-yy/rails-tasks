@@ -1,0 +1,12 @@
+<section class="hero is-small is-link has-text-centered">
+  <div class="hero-body">
+    <h1 class="title is-1">
+      <% if content_for(:title) %>
+        <%= yield :title %>
+      <% else %>
+      <%= link_to "Tasks", tasks_path %>
+      <% end %>
+    </h1>
+      <%= link_to "Create a Task", new_task_path, class:"button is-success is-large" %>
+  </div>
+</section>
